@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <title>Enjoy your time</title>
+  <link href="dist/examples.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="navbar navbar-dark navbar-expand-md bg-dark navbar-static-top" role="navigation">
+    <div class="container">
+      <a class="navbar-brand" href="">Enjoy your time</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#titleBar"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1><font color="white">Leitura Otimizada</font></h1>
+      <p><font color="white">Use seu tempo com sabedoria. Paciência!</font></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 id="intro">Introdução</h2>
+        <p>Esse simples site foi criado para ajudar você a aproveitar melhor o seu tempo programando sua leitura. Siga
+          os seguintes passos:</p>
+        <ul>
+          <li>
+            Inicie o cronometro e leia uma página inteira do seu livro.
+          </li>
+          <li>
+            Desative o cronometro quando terminar de ler uma página.
+          </li>
+          <li>
+            Infome quantas páginas o livro tem, para visualizar uma média de tempo que será gasto para terminar de ler o
+            livro completo.
+          </li>
+          <li>
+            Informe em quantos dias deseja terminar de ler, para saber quantos minutos de leitura por dia são necessárias.
+          </li>
+        </ul>
+        <div id="IdDoinput"></div>
+        <div id="IdDoinput2"></div>
+        <div class="">
+          <div class="text-center card-body" id="chronoExample">
+            <div style="font-size:300%;" id="tempo" class="values">00:00:00</div>
+            <div>
+              <button class="startButton btn btn-success btn-lg mb-1">Iniciar</button>
+              <button class="pauseButton btn btn-primary btn-lg mb-1">Pause</button>
+              <button class="stopButton btn btn-danger btn-lg mb-1">Parar</button>
+              <button class="resetButton btn btn-warning btn-lg mb-1">Reiniciar</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="text-center card-body">
+          <h4 id="startAndTargetValuesExample">Quantas páginas seu livro tem?!</h4>
+          
+         <!-- <form id="perguntarPgs">   </form> -->
+              <input type="number" id="numPaginas">
+              <button onclick="pegarTempo() ; Mudarestado('horasPorDia')" class="btn btn-primary btn-lg mb-1" href="#example" >Calcular</button>
+        </div>
+
+        <div class="text-center card-body">
+          
+              <div class="alert alert-success" id="results"></div>
+          
+        </div>
+        <div class="text-center card-body">
+        <div  id="horasPorDia">
+                
+          <br>
+          <h4 id="startAndTargetValuesExample">Em quantos dias você gostaria de finalizar seu livro?</h4>
+          <input type="number" id="diasDesejados">
+          <button onclick="calcularHorasDias('horaFinal')" class="btn btn-primary btn-lg mb-1">Calcular</button>
+        </div>
+      </div>
+        <div class="text-center card-body">
+          
+            <div class="alert alert-success" id="results2">
+            </div>
+          
+        </div>
+
+      </div>
+
+      <script src="dist/examples.min.js"> </script>
+      <script src="script-calculo.js"></script>
+</body>
+
+</html>
