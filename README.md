@@ -18,7 +18,7 @@
 ## Casos de Uso
   1. O usuário aciona um botão indicando o início da leitura e outro indicando o término, também insere a quantidade de páginas do      livro. 
   2. O sistema calcula quanto tempo o usuário irá gastar para ler o livro completo e retorna para o usuário. 
-  3. O usuário indica a meta de dias para ler o livro completo e o sistema retorna a quantidade de horas diárias para alcançar a meta.
+  3. O usuário indica a meta de dias para ler o livro completo e o sistema retorna a quantidade de minutos diárias para alcançar a meta.
   
 ## Dependências
   Não há dependências
