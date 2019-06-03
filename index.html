@@ -37,28 +37,24 @@
         <p>Esse simples site foi criado para ajudar você a aproveitar melhor o seu tempo programando sua leitura. Siga
           os seguintes passos:</p>
         <ul>
-          <li>
-            Inicie o cronometro e leia uma página inteira do seu livro.
-          </li>
-          <li>
-            Desative o cronometro quando terminar de ler uma página.
-          </li>
-          <li>
-            Infome quantas páginas o livro tem, para visualizar uma média de tempo que será gasto para terminar de ler o
-            livro completo.
-          </li>
-          <li>
-            Informe em quantos dias deseja terminar de ler, para saber quantos minutos de leitura por dia são necessárias.
-          </li>
+          
         </ul>
         <div id="IdDoinput"></div>
         <div id="IdDoinput2"></div>
         <div class="">
           <div class="text-center card-body" id="chronoExample">
+          <div class="text-center">
+                <li>
+                  Inicie o cronometro e leia uma página inteira do seu livro.
+                </li>
+                <li>
+                  Desative o cronometro quando terminar de ler uma página.
+                </li>
+              </div>
             <div style="font-size:300%;" id="tempo" class="values">00:00:00</div>
             <div>
               <button class="startButton btn btn-success btn-lg mb-1">Iniciar</button>
-              <button class="pauseButton btn btn-primary btn-lg mb-1">Pause</button>
+              <button class="pauseButton btn btn-primary btn-lg mb-1">Pausar</button>
               <button class="stopButton btn btn-danger btn-lg mb-1">Parar</button>
               <button class="resetButton btn btn-warning btn-lg mb-1">Reiniciar</button>
             </div>
@@ -67,11 +63,17 @@
 
 
         <div class="text-center card-body">
-          <h4 id="startAndTargetValuesExample">Quantas páginas seu livro tem?!</h4>
+          <div class="text-center">
+            <li>
+                Infome quantas páginas o livro tem, para visualizar uma média de tempo que será gasto para terminar de ler o
+                livro completo.
+            </li>
+          </div><br>
+          <h4 id="startAndTargetValuesExample">Quantas páginas seu livro tem?!</h4><br>
           
-         <!-- <form id="perguntarPgs">   </form> -->
               <input type="number" id="numPaginas">
               <button onclick="pegarTempo() ; Mudarestado('horasPorDia')" class="btn btn-primary btn-lg mb-1" href="#example" >Calcular</button>
+              
         </div>
 
         <div class="text-center card-body">
@@ -83,9 +85,16 @@
         <div  id="horasPorDia">
                 
           <br>
+          <div class="text-center"> 
+              <li>
+                Informe em quantos dias deseja terminar de ler, para saber quantos minutos de leitura por dia são necessárias.
+              </li>
+            </div><br>
           <h4 id="startAndTargetValuesExample">Em quantos dias você gostaria de finalizar seu livro?</h4>
+          
           <input type="number" id="diasDesejados">
           <button onclick="calcularHorasDias('horaFinal')" class="btn btn-primary btn-lg mb-1">Calcular</button>
+          
         </div>
       </div>
         <div class="text-center card-body">
@@ -95,7 +104,18 @@
           
         </div>
 
+        
+        <div id="livro" class="text-center card-body">
+            <li>
+                Inicie o cronometro e leia uma página inteira do seu livro.
+              </li><br>
+            <h4 id="startAndTargetValuesExample">Digite o nome do livro para pesquisar o seu preço:</h4><br>
+                <input type="text" id="livros">
+                <input type="button" class="btn btn-primary btn-lg mb-1" target="_blank" onclick="location.href='http://www.amazon.com.br/s?k=' + document.getElementById('livros').value + '&i=stripbooks&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2';" value="Pesquisar Livro" />
+          </div>
+
       </div>
+      
 
       <script src="dist/examples.min.js"> </script>
       <script src="script-calculo.js"></script>

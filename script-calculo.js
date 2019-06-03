@@ -13,6 +13,9 @@ divOne.style.display = 'none';
 var divOne = document.getElementById('IdDoinput2');
 divOne.style.display = 'none';
 
+var livro = document.getElementById('livro');
+livro.style.display = 'none';
+
 
 var minutos;
 function pegarTempo() {
@@ -57,6 +60,7 @@ function calcularHorasDias(horaFinal) {
     document.getElementById('results2').innerHTML = 'Você lerá todo o livro em menos de um dia';
   else
     document.getElementById('results2').innerHTML = 'Será necessário ler cerca de ' + horasDias + ' minuto(s) por dia para finalizar este livro em ' + dias + ' dia(s)!';
+  livro.style.display = "block"
 }
 
 var show = function (elem) {
